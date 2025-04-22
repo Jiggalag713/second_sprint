@@ -28,7 +28,7 @@ public class ShoppingCart {
     public double getPriceWODiscountVegetarian() {
         double sum = 0.0;
         for (Food x: food) {
-            if (x.isVegetarian() == true) {
+            if (x.isVegetarian()) {
                 sum = sum + x.getPrice() * x.getAmount();
             }
         }

@@ -1,5 +1,6 @@
 package model;
 
+import model.constants.Colour;
 import model.constants.Discount;
 
 public class Apple extends Food {
@@ -12,8 +13,8 @@ public class Apple extends Food {
 
     @Override
     public double getDiscount(){
-        if (colour == "red") {
-            return Discount.discountRedApple;
+        if (colour.equals(Colour.RED)) {
+            return Discount.DISCOUNT_RED_APPLE;
         }
         return 0.0;
     }
